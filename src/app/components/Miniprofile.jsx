@@ -7,7 +7,7 @@ import React from "react";
 export default function Miniprofile() {
   const { data: session } = useSession();
   return (
-    <div className="flex items-center justify-between mt-14- scroll-ml-10">
+    <div className="flex items-center justify-between mt-14 ml-10 w-full">
       <img
         src={session?.user?.image || "/800px-Instagram_logo_2016.webp"}
         alt="user-profile-pic or instagram logo"
@@ -22,14 +22,14 @@ export default function Miniprofile() {
           onClick={signOut}
           className="text-sm font-semibold text-blue-500"
         >
-          Log Out
+          Sign Out
         </button>
       ) : (
         <button
           onClick={signIn}
           className="text-sm font-semibold text-blue-500"
         >
-          Log In
+          Sign In
         </button>
       )}
     </div>
