@@ -1,5 +1,6 @@
 // Import Firebase modules
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
@@ -12,11 +13,9 @@ const firebaseConfig = {
   appId: "1:1004528055367:web:440a120489f10005c7ad62"
 };
 
-// Initialize Firebase app
-const firebaseApp = initializeApp(firebaseConfig);
-
-// Initialize Firebase Storage
-const storage = getStorage(firebaseApp);
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const storage = getStorage(app);
 
 // Export both for use in your app
-export { firebaseApp, storage };
+export { app, storage, db };
