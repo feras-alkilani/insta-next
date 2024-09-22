@@ -1,6 +1,6 @@
 import React from "react";
 import Posts from "./Posts";
-import MiniProfile from "./MiniProfile";
+// import MiniProfile from "./MiniProfile";
 
 export default function Feed() {
   return (
@@ -14,9 +14,7 @@ export default function Feed() {
       {/*  MiniProfile (Right) */}
 
       <section className="hidden md:inline-grid md:col-span-1">
-        <div className="fixed w-[380px]">
-          <MiniProfile />
-        </div>
+        <div className="fixed w-[380px]">{/* <MiniProfile /> */}</div>
       </section>
     </main>
   );
